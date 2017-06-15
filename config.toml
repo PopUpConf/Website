@@ -1,0 +1,4 @@
+siteTitle="PopUpConf"
+linkPrefix = "/"
+
+noProductionJavascript = false
