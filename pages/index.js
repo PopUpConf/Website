@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+import SVGInline from 'react-svg-inline';
 import Helmet from 'react-helmet';
+
+import Logo from '!raw-loader!../assets/PopUpConf_Logo.svg'
 
 import { config } from 'config';
 import PageLink from '../components/common/PageLink';
@@ -9,7 +12,7 @@ class IndexPage extends Component {
     return (
       <div className="home">
         <Helmet
-          title={`${config.siteTitle} | Home`}
+          title={config.siteTitle}
           meta={[
             {"name": "description", "content": "Sample"},
             {"name": "keywords", "content": "sample, something"},
@@ -17,7 +20,9 @@ class IndexPage extends Component {
         />
         <div className="hero">
           <div>
-            <h1>PopUpConf</h1>
+            <h1 className="brand">
+              <SVGInline svg={Logo} />
+            </h1>
             <div className="cta">
               <div className="input-group">
                 <input type="text" className="form-input" placeholder="Enter your email" />

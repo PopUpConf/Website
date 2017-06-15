@@ -1,11 +1,26 @@
 .home {
-  background: linear-gradient(135deg, @primary-color, @primary-color-dark);
+  background: linear-gradient(135deg, @secondary-color, @primary-color);
   .hero {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    min-height: 80vh;
+    min-height: 100vh;
+    .brand {
+      svg {
+        width: 48rem;
+        max-width: 90vw;
+        .background {
+          fill: @dark-color;
+        }
+        .outline {
+          fill: @primary-color;
+        }
+        .text {
+          fill: @light-color;
+        }
+      }
+    }
     .cta {
       margin-bottom: @layout-padding;
     }
