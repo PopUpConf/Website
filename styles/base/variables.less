@@ -3,56 +3,59 @@
 // Global
 @html-font-size: 10px;
 @html-line-height: 1.428571429;
-@html-bg: @grey-white;
-@body-bg: none;
-@body-font-color: @grey-dark;
-@body-font-size: 1.4rem;
-// https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
-@body-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Hiragino Kaku Gothic Pro", Meiryo, "Malgun Gothic", "Helvetica Neue", sans-serif;
-@mono-font-family: Monaco, "Andale Mono", "Courier New", "Consolas", "Courier", monospace;
+@body-bg: @bg-color-light;
+@body-font-color: lighten(@dark-color, 5%);
+@font-size: 1.4rem;
+@font-size-sm: 1.2rem;
+@font-size-lg: 1.6rem;
+
+// Fonts
+// Credit: https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
+@base-font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
+@fallback-font-family: "Helvetica Neue", sans-serif;
+@cjk-font-family: @base-font-family, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Hiragino Kaku Gothic Pro", Meiryo, "Malgun Gothic", @fallback-font-family;
+@body-font-family: @base-font-family, @fallback-font-family;
 
 // Sizes
-@layout-gutter: 2rem;
-@layout-padding: 2rem;
-@layout-margin: 2rem;
-@border-radius: 0.3rem;
+@layout-padding: 1rem;
+@layout-padding-lg: 1.5rem;
+@control-min-width: 18rem;
+@border-radius: .2rem;
+@border-width: .1rem;
 
 // Colors
-@grey-white: #fff;
+// Core colors
+@primary-color: #5764c6;
+@primary-color-dark: darken(@primary-color, 3%);
+@primary-color-light: lighten(@primary-color, 3%);
+@secondary-color: lighten(@primary-color, 40%);
+@secondary-color-dark: darken(@secondary-color, 3%);
+@secondary-color-light: lighten(@secondary-color, 3%);
 
-@grey-light-light: lighten(@grey-mid, 44%);
-@grey-light:       lighten(@grey-mid, 33%);
-@grey-light-dark:  lighten(@grey-mid, 22%);
-@grey-mid-light:   lighten(@grey-mid, 11%);
-@grey-mid:         lighten(#000, 50%);
-@grey-mid-dark:     darken(@grey-mid, 11%);
-@grey-dark-light:   darken(@grey-mid, 22%);
-@grey-dark:         darken(@grey-mid, 33%);
-@grey-dark-dark:    darken(@grey-mid, 44%);
+@link-color: @primary-color;
+@link-color-dark: darken(@link-color, 10%);
 
-@grey-black: #000;
+// Gray colors
+@dark-color: #454d5d;
+@light-color: #fff;
+@gray-color: lighten(@dark-color, 40%);
+@gray-color-dark: darken(@gray-color, 20%);
+@gray-color-light: lighten(@gray-color, 20%);
 
-@core-color-bright: lighten(@core-color, 30%);
-@core-color: #6290C3;
-@core-color-dark: darken(@core-color, 30%);
+@border-color: lighten(@gray-color-light, 3%);
+@border-color-dark: darken(@border-color, 15%);
+@bg-color: lighten(@dark-color, 66%);
+@bg-color-dark: darken(@bg-color, 3%);
+@bg-color-light: @light-color;
 
-@core-secondary-color: #97DFFC;
-
-@core-light-color: @grey-white;
-@core-meta-color: @grey-mid;
-
-@core-link-color: @core-color;
-@core-link-dark-color: @core-color-dark;
-
-@core-border-color: @grey-dark;
-@core-empty-bg: @grey-dark;
-@control-color: @grey-mid-dark;
+// Control colors
 @control-color-success: #32b643;
-@control-color-info: #0193eb;
 @control-color-warning: #ffb700;
-@control-color-danger: #e85600;
+@control-color-error: #e85600;
 
-
+// Other colors
+@code-color: #e06870;
+@highlight-color: #ffe9b3;
 
 // Responsive breakpoints
 @size-xs: 480px;
@@ -60,38 +63,11 @@
 @size-md: 840px;
 @size-lg: 960px;
 @size-xl: 1280px;
+@size-2x: 1440px;
 
-// Mixins
-.clearfix() {
-  &::after {
-    clear: both;
-    content: "";
-    display: table;
-  }
-}
-.toast-variant(@color) {
-  background: @color;
-  border-color: darken(@color, 2%);
-  color: @core-light-color;
-
-  a {
-    color: @core-light-color;
-
-    &:hover,
-    &:focus,
-    &:active {
-      opacity: .75;
-    }
-  }
-}
-.label-base() {
-  border-radius: .2rem;
-  display: inline;
-  font-size: 1em;
-  padding: .1em .3em;
-  vertical-align: baseline;
-}
-.label-variant(@color) {
-  background: @color;
-  color: @core-light-color;
-}
+// Z-index
+@zindex-0: 1;
+@zindex-1: 100;
+@zindex-2: 200;
+@zindex-3: 300;
+@zindex-4: 400;

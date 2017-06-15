@@ -15,10 +15,17 @@ class IndexPage extends Component {
             {"name": "keywords", "content": "sample, something"},
           ]}
         />
-      <p>Welcome to the Gatsby Barebones Starter!</p>
-        <PageLink to={'/about'}>
-          About Page >>
-        </PageLink>
+        <div className="hero">
+          <div>
+            <h1>PopUpConf</h1>
+            <div className="cta">
+              <div className="input-group">
+                <input type="text" className="form-input" placeholder="Enter your email" />
+                <button className="btn btn-primary input-group-btn">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     )
   }
