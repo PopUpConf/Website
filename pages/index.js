@@ -7,7 +7,7 @@ import PageLink from '../components/common/PageLink';
 class IndexPage extends Component {
   render () {
     return (
-      <div>
+      <div className="home">
         <Helmet
           title={`${config.siteTitle} | Home`}
           meta={[

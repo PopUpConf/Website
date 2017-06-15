@@ -12,16 +12,7 @@ module.exports = React.createClass({
   render() {
     return (
       <div>
-        <div className='site-header'>
-          <PageLink to={'/'}>
-            <h1>
-              Barebones Starter
-            </h1>
-          </PageLink>
-        </div>
-        <div>
-          {this.props.children}
-        </div>
+        {this.props.children}
       </div>
     );
   },
