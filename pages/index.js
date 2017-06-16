@@ -19,16 +19,15 @@ class IndexPage extends Component {
           ]}
         />
         <div className="hero">
-          <div>
-            <h1 className="brand">
-              <SVGInline svg={Logo} />
-            </h1>
-            <div className="cta">
-              <div className="input-group">
-                <input type="text" className="form-input" placeholder="Enter your email" />
-                <button className="btn btn-primary input-group-btn">Submit</button>
-              </div>
-            </div>
+          <h1 className="brand">
+            <SVGInline svg={Logo} /><br />
+          </h1>
+          <h2>
+            September 17<sup>th</sup>, 2017
+          </h2>
+          <div className="cta input-group">
+            <input type="text" className="form-input input-lg" placeholder="Enter your email" />
+            <button className="btn btn-primary btn-lg input-group-btn">Sign Up</button>
           </div>
         </div>
       </div>

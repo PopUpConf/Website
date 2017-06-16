@@ -2,11 +2,12 @@
   background: linear-gradient(135deg, @secondary-color, @primary-color);
   .hero {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
     min-height: 100vh;
-    .brand {
+    h1 {
       svg {
         width: 48rem;
         max-width: 90vw;
@@ -22,7 +23,7 @@
       }
     }
     .cta {
-      margin-bottom: @layout-padding;
+      margin: @layout-padding-lg;
     }
   }
 }
