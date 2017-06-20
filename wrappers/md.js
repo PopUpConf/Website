@@ -1,21 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
 import { config } from 'config';
 
-module.exports = React.createClass({
-  propTypes () {
-    return {
-      router: React.PropTypes.object,
-    }
-  },
-  render () {
+export default class extends Component {
+
+  static propTypes = {
+    route: PropTypes.object,
+    router: PropTypes.object,
+  }
+
+  render() {
     const page = this.props.route.page.data;
-    const description = page.description || "";
-    const keywords = page.keywords || "";
+    const description = page.description || '';
+    const keywords = page.keywords || '';
     const meta = [
-      {"name": "description", "content": description},
-      {"name": "keywords", "content": keywords },
+      { name: 'description', content: description },
+      { name: 'keywords', content: keywords },
     ];
     return (
       <div className="markdown">
@@ -25,6 +27,6 @@ module.exports = React.createClass({
         />
         <div dangerouslySetInnerHTML={{ __html: page.body }} />
       </div>
-    )
-  },
-})
+    );
+  }
+}
