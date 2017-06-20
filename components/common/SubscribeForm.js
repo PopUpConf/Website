@@ -1,50 +1,32 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import jsonp from 'jsonp';
 
 export default class SubscribeForm extends Component {
 
-  submitSubscribeForm = () => {
+  constructor(props) {
+    super(props);
+    this.state = {
+      emailInput: '',
+    };
+  }
 
+  submitForm = () => {
+    jsonp('http://popupconf.us16.list-manage.com/subscribe/post-json?u=b00bcf357c93f18c04036ae18&id=f45dc9178b&EMAIL=ben%40hawker.me', { param: 'c' }, (err, data) => {
+      console.log(err, data);
+    });
+  }
+
+  handleChange = (e) => {
+    this.setState({ emailInput: e.target.value });
   }
 
   render() {
     return (
       <div className="input-group">
-        <input type="text" className="form-input input-lg" placeholder="Enter your email" />
-        <button className="btn btn-primary btn-lg input-group-btn">Sign Up</button>
+        <input type="text" className="form-input input-lg" placeholder="Enter your email" onChange={this.handleChange} value={this.state.emailInput} />
+        <button className="btn btn-primary btn-lg input-group-btn" onClick={this.submitForm}>Sign Up</button>
       </div>
     );
   }
 }
 
-// $.ajax({
-//     type: "GET",
-//     url: $form.attr("action"),
-//     data: $form.serialize(),
-//     cache: false,
-//     dataType: "jsonp",
-//     jsonp: "c", // trigger MailChimp to return a JSONP response
-//     contentType: "application/json; charset=utf-8",
-
-//     error: function(error){
-//         // According to jquery docs, this is never called for cross-domain JSONP requests
-//     },
-
-//     success: function(data){
-//         if (data.result != "success") {
-//             var message = data.msg || "Sorry. Unable to subscribe. Please try again later.";
-//             $resultElement.css("color", "red");
-
-//             if (data.msg && data.msg.indexOf("already subscribed") >= 0) {
-//                 message = "You're already subscribed. Thank you.";
-//                 $resultElement.css("color", "black");
-//             }
-
-//             $resultElement.html(message);
-
-//         } else {
-//             $resultElement.css("color", "black");
-//             $resultElement.html("Thank you!<br>You must confirm the subscription in your inbox.");
-//         }
-//     }
-// });
