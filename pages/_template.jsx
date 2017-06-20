@@ -1,19 +1,17 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 import '../styles/main.less';
 
-import PageLink from '../components/common/PageLink';
+export default class extends Component {
 
-module.exports = React.createClass({
-  propTypes () {
-    return {
-      children: React.PropTypes.any,
-    };
-  },
+  static propTypes = {
+    children: PropTypes.any,
+  }
+
   render() {
     return (
       <div>
         {this.props.children}
       </div>
     );
-  },
-});
+  }
+}

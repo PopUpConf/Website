@@ -1,20 +1,31 @@
-import React from 'react';
+import React, { PureComponent, PropTypes } from 'react';
 import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
-import { config } from 'config';
 
-const PageLink = ({ to, children }) => {
-  // add a trailing slash if there is not one (to support SPA)
-  let linkTo = to;
-  if (to.substr(to.length-1) !== '/') {
-    linkTo = to + '/';
+export default class PageLink extends PureComponent {
+
+  static propTypes = {
+    to: PropTypes.string,
+    children: PropTypes.node,
   }
-  const prefixedLink = prefixLink(linkTo);
-  return (
-    <Link to={prefixedLink}>
-      {children}
-    </Link>
-  );
-};
 
-export default PageLink;
+  static defaultProps = {
+  }
+
+  render() {
+    const { to, children } = this.props;
+
+    // add a trailing slash if there is not one (to support SPA)
+    let linkTo = to;
+    if (to.substr(to.length - 1) !== '/') {
+      linkTo = `${to}/`;
+    }
+
+    return (
+      <Link to={prefixLink(linkTo)}>
+        {children}
+      </Link>
+    );
+  }
+}
+
