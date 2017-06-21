@@ -28,7 +28,7 @@ export default class IndexPage extends Component {
   render() {
     const { toast } = this.state;
     return (
-      <div className="home" style={{ backgroundImage: `url(${Background})` }}>
+      <div className="home">
         <Helmet
           title={config.siteTitle}
           meta={[
@@ -36,8 +36,8 @@ export default class IndexPage extends Component {
             { name: 'keywords', content: 'sample, something' },
           ]}
         />
-        { toast ? <div className="toast toast-floating abs">{toast} </div> : null }
-        <div className="hero">
+        { toast ? <div className="toast toast-primary toast-floating abs">{toast} </div> : null }
+        <div className="hero" style={{ backgroundImage: `url(${Background})` }}>
           <h1 className="brand">
             <SVGInline svg={Logo} /><br />
           </h1>
