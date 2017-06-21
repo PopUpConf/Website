@@ -1,4 +1,8 @@
 siteTitle="PopUpConf"
 linkPrefix = "/"
 
+mailchimpHost = "popupconf.us16.list-manage.com"
+mailchimpUserId = "b00bcf357c93f18c04036ae18"
+mailchimpListId = "f45dc9178b"
+
 noProductionJavascript = false
