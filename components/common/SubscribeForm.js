@@ -70,7 +70,7 @@ export default class SubscribeForm extends Component {
     return (
       <div className={classnames('toast', { 'toast-error': submitError })}>
         <button className="btn btn-clear float-right" onClick={this.handleClear} />
-        {message}
+        <span dangerouslySetInnerHTML={{ __html: message }} />
       </div>
     );
   }

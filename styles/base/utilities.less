@@ -70,6 +70,22 @@
   }
 }
 
+// Fade Out
+.fade-out {
+  animation: fade-out 500ms ease-out;
+  animation-fill-mode: forwards;
+
+  .delays(@i, @offset) when (@i >= 0) {
+    .delays((@i - @offset), @offset);
+    &.fade-out-delay-@{i} {
+      animation-delay: @i * 1s;
+    }
+  }
+  .delays(60, 5);
+}
+
+
+
 // Position
 .clearfix {
   .clearfix();

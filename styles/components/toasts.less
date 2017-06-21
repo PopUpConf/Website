@@ -24,6 +24,14 @@
     .toast-variant(@control-color-error);
   }
 
+  &.toast-floating {
+    margin: @layout-padding;
+    min-width: @control-min-width;
+    width: auto;
+    max-width: 100%;
+    animation: slide-down .2s ease 1;
+  }
+
   a {
     color: @light-color;
     text-decoration: underline;
