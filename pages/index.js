@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import SVGInline from 'react-svg-inline';
 import Helmet from 'react-helmet';
 import queryString from 'query-string';
-
-import Background from '../assets/Background.jpg';
-import Logo from '!raw-loader!../assets/PopUpConf_Logo.svg';
-
 import { config } from 'config';
+
+import Logo from '!raw-loader!../assets/PopUpConf_Logo.svg';
+import Background from '../assets/Background.jpg';
+
 import SubscribeForm from '../components/common/SubscribeForm.js';
 
 export default class IndexPage extends Component {
