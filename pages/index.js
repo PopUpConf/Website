@@ -19,7 +19,8 @@ export default class IndexPage extends Component {
   }
 
   componentWillMount() {
-    const query = queryString.parse(location.search);
+    if (typeof window === 'undefined') return;
+    const query = queryString.parse(window.location.search);
     if (query.sub_confirm) this.setState({ toast: <span><i className="icon icon-check" /> Subscription confirmed</span> });
   }
 
