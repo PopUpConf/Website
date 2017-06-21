@@ -27,7 +27,7 @@ export default class SubscribeForm extends Component {
     if (isEmail(inputEmail)) {
       this.setState({ submitLoading: true });
 
-      const requestUrl = `http://${mailchimpHost}/subscribe/post-json?u=${mailchimpUserId}&id=${mailchimpListId}&EMAIL=${inputEmail}`;
+      const requestUrl = `https://${mailchimpHost}/subscribe/post-json?u=${mailchimpUserId}&id=${mailchimpListId}&EMAIL=${inputEmail}`;
 
       jsonp(requestUrl, { param: 'c' }, (err, data) => {
         this.setState({ message: data.msg, submitLoading: false, submitError: err || data.result !== 'success' });
