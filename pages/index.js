@@ -3,6 +3,7 @@ import SVGInline from 'react-svg-inline';
 import Helmet from 'react-helmet';
 import queryString from 'query-string';
 
+import Background from '../assets/Background.jpg';
 import Logo from '!raw-loader!../assets/PopUpConf_Logo.svg';
 
 import { config } from 'config';
@@ -27,7 +28,7 @@ export default class IndexPage extends Component {
   render() {
     const { toast } = this.state;
     return (
-      <div className="home">
+      <div className="home" style={{ backgroundImage: `url(${Background})` }}>
         <Helmet
           title={config.siteTitle}
           meta={[

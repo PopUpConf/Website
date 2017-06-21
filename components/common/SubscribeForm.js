@@ -9,7 +9,7 @@ export default class SubscribeForm extends Component {
 
   static getInitialState = () => ({
     inputEmail: '',
-    inputError: false,
+    inputError: '',
     submitLoading: false,
     submitError: false,
     message: '',
@@ -33,7 +33,7 @@ export default class SubscribeForm extends Component {
         this.setState({ message: data.msg, submitLoading: false, submitError: err || data.result !== 'success' });
       });
     } else {
-      this.setState({ inputError: true });
+      this.setState({ inputError: 'Uh oh! That\'s not a real email address.' });
     }
 
 
@@ -41,7 +41,7 @@ export default class SubscribeForm extends Component {
   }
 
   handleChange = (e) => {
-    this.setState({ inputEmail: e.target.value });
+    this.setState({ inputEmail: e.target.value, inputError: '' });
   }
 
   handleClear = () => {
@@ -63,7 +63,7 @@ export default class SubscribeForm extends Component {
             <input type="text" className={classnames('form-input', 'input-lg', inputClasses)} placeholder="Enter your email" onChange={this.handleChange} value={inputEmail} />
             <button type="submit" className={classnames('btn', 'btn-primary', 'btn-lg', 'input-group-btn', inputClasses)}>Sign Up</button>
           </div>
-          { inputError ? <p className="form-input-hint">Uh oh! That's not a real email address.</p> : null }
+          <p className={classnames('label', 'label-error', 'form-input-hint', { invisible: !inputError })}>{inputError}&nbsp;</p>
         </form>
       );
     }
