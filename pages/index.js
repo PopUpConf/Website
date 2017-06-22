@@ -5,7 +5,6 @@ import queryString from 'query-string';
 import { config } from 'config';
 
 import Logo from '!raw-loader!../assets/PopUpConf_Logo.svg';
-import Background from '../assets/Background.jpg';
 
 import SubscribeForm from '../components/common/SubscribeForm.js';
 
@@ -36,8 +35,8 @@ export default class IndexPage extends Component {
             { name: 'keywords', content: 'sample, something' },
           ]}
         />
-        { toast ? <div className="toast toast-primary toast-floating abs">{toast} </div> : null }
-        <div className="hero" style={{ backgroundImage: `url(${Background})` }}>
+        { toast ? <div className="toast toast-floating abs">{toast} </div> : null }
+        <div className="hero">
           <h1 className="brand">
             <SVGInline svg={Logo} /><br />
           </h1>
