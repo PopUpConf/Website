@@ -9,7 +9,7 @@
     // background: ;
     .pattern-variant(@primary-color, 0.2);
     background-color: @secondary-color;
-    background-image: @overlapping-circles, linear-gradient(0deg, @secondary-color, lighten(@secondary-color, 5%));
+    background-image: @overlapping-circles, linear-gradient(-30deg, @secondary-color, lighten(@secondary-color, 5%));
 
     border-radius: @border-radius;
 
@@ -30,9 +30,19 @@
       }
     }
     .cta {
+      padding: @layout-padding;
       margin: @layout-padding-lg;
       width: 32em;
       max-width: 95%;
+
+      border: @border-width solid @border-color;
+      border-radius: @border-radius;
+      background: @light-color;
+
+      .cta-call {
+        font-size: @font-size-lg;
+        text-align: center;
+      }
     }
   }
 }

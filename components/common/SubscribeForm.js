@@ -63,7 +63,7 @@ export default class SubscribeForm extends Component {
             <input type="text" className={classnames('form-input', 'input-lg', inputClasses)} placeholder="Enter your email" onChange={this.handleChange} value={inputEmail} />
             <button type="submit" className={classnames('btn', 'btn-primary', 'btn-lg', 'input-group-btn', inputClasses)}>Sign Up</button>
           </div>
-          <p className={classnames('label', 'label-error', 'form-input-hint', { invisible: !inputError })}>{inputError}&nbsp;</p>
+          <p className={classnames('label', 'label-error', 'abs', 'form-input-hint', { invisible: !inputError })}>{inputError}&nbsp;</p>
         </form>
       );
     }

@@ -40,10 +40,11 @@ export default class IndexPage extends Component {
           <h1 className="brand">
             <SVGInline svg={Logo} /><br />
           </h1>
-          <h2>
+          <h3>
             September 17<sup>th</sup>, 2017
-          </h2>
+          </h3>
           <div className="cta">
+            <p className="cta-call">Be the <b>first</b> to get access!</p>
             <SubscribeForm />
           </div>
         </div>
