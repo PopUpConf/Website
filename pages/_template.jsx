@@ -19,7 +19,7 @@ export default class extends Component {
       <div>
         <Helmet
           titleTemplate={`${config.siteTitle} - %s`}
-          defaultTitle={config.site}
+          defaultTitle={config.siteTitle}
           link={[
             {
               rel: 'icon',

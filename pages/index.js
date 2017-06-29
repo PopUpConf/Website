@@ -7,6 +7,7 @@ import { config } from 'config';
 
 import Logo from '!raw-loader!../assets/PopUpConf_Logo.svg';
 import OpenGraphImage from '../assets/PopUpConf_OpenGraph.png';
+import TwitterImage from '../assets/PopUpConf_Twitter.png';
 
 import SubscribeForm from '../components/common/SubscribeForm.js';
 
@@ -34,11 +35,15 @@ export default class IndexPage extends Component {
           meta={[
             { name: 'description', content: config.siteDescription },
             { name: 'keywords', content: config.siteKeywords.join() },
-            { name: 'og:title', content: config.siteTitle },
+            { name: 'og:title', content: config.siteSummary },
             { name: 'og:description', content: config.siteDescription },
             { name: 'og:type', content: 'website' },
             { name: 'og:image', content: `http://${config.siteHost}${prefixLink(OpenGraphImage)}` },
             { name: 'og:url', content: `http://${config.siteHost}/` },
+            { name: 'twitter:card', content: 'summary_large_image' },
+            { name: 'twitter:title', content: config.siteSummary },
+            { name: 'twitter:description', content: config.siteDescription },
+            { name: 'twitter:image', content: `http://${config.siteHost}${prefixLink(TwitterImage)}` },
           ]}
         />
         { toast ? <div className="toast toast-floating abs">{toast} </div> : null }
