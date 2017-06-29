@@ -37,7 +37,7 @@ export default class IndexPage extends Component {
             { name: 'og:title', content: config.siteTitle },
             { name: 'og:description', content: config.siteDescription },
             { name: 'og:type', content: 'website' },
-            { name: 'og:image', content: `http://${config.siteHost}/${prefixLink(OpenGraphImage)}` },
+            { name: 'og:image', content: `http://${config.siteHost}${prefixLink(OpenGraphImage)}` },
             { name: 'og:url', content: `http://${config.siteHost}/` },
           ]}
         />
