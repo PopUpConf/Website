@@ -1,5 +1,8 @@
-siteTitle="PopUpConf"
 linkPrefix = ""
+siteHost = "popupconf.co"
+siteTitle = "PopUpConf"
+siteDescription = "(Probably) Canada's First PopUp Tech Conference. Popping up Spetember 13th, 2017 in Victoria, BC."
+siteKeywords = ["PopUp", "Conference"]
 
 mailchimpHost = "popupconf.us16.list-manage.com"
 mailchimpUserId = "b00bcf357c93f18c04036ae18"

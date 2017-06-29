@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import SVGInline from 'react-svg-inline';
 import Helmet from 'react-helmet';
+import SVGInline from 'react-svg-inline';
 import queryString from 'query-string';
+import { prefixLink } from 'gatsby-helpers';
 import { config } from 'config';
 
 import Logo from '!raw-loader!../assets/PopUpConf_Logo.svg';
+import OpenGraphImage from '../assets/PopUpConf_OpenGraph.png';
 
 import SubscribeForm from '../components/common/SubscribeForm.js';
 
@@ -29,10 +31,14 @@ export default class IndexPage extends Component {
     return (
       <div className="home">
         <Helmet
-          title={config.siteTitle}
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            { name: 'description', content: config.siteDescription },
+            { name: 'keywords', content: config.siteKeywords.join() },
+            { name: 'og:title', content: config.siteTitle },
+            { name: 'og:description', content: config.siteDescription },
+            { name: 'og:type', content: 'website' },
+            { name: 'og:image', content: `http://${config.siteHost}/${prefixLink(OpenGraphImage)}` },
+            { name: 'og:url', content: `http://${config.siteHost}/` },
           ]}
         />
         { toast ? <div className="toast toast-floating abs">{toast} </div> : null }

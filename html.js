@@ -11,7 +11,7 @@ const HTML = (props) => {
   // only include bundle.js if we are running in production mode
   // and noProductionJavascript is set as true
   let js = <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} />;
-  if (process.env.NODE_ENV === 'production' && config.noProductionJavascript ) {
+  if (process.env.NODE_ENV === 'production' && config.noProductionJavascript) {
     js = null;
   }
 
@@ -32,6 +32,7 @@ const HTML = (props) => {
         />
         {head.title.toComponent()}
         {head.meta.toComponent()}
+        {head.link.toComponent()}
         {css}
       </head>
       <body>
