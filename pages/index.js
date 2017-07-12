@@ -6,9 +6,11 @@ import { prefixLink } from 'gatsby-helpers';
 import { config } from 'config';
 
 import Logo from '!raw-loader!../assets/PopUpConf_Logo.svg';
+import FirstIcon from '!raw-loader!../assets/PopUp_Icons_First.svg';
 import OpenGraphImage from '../assets/PopUpConf_OpenGraph.png';
 import TwitterImage from '../assets/PopUpConf_Twitter.png';
 
+import Factoid from '../components/common/Factoid.js';
 import SubscribeForm from '../components/common/SubscribeForm.js';
 
 export default class IndexPage extends Component {
@@ -59,6 +61,7 @@ export default class IndexPage extends Component {
             <p className="cta-call">Signup and reserve your seat for free.</p>
             <SubscribeForm />
           </div>
+          <Factoid icon={FirstIcon} content="Probably the worlds first PopUp Conference!" right="4rem" bottom="6rem" />
         </div>
       </div>
     );
