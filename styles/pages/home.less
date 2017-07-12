@@ -30,21 +30,22 @@
       }
     }
     .cta {
-      padding: @layout-padding;
       margin: @layout-padding-lg;
-      width: 32em;
-      max-width: 95%;
+      padding: @layout-padding-lg;
+      max-width: 32rem;
 
-      border: @border-width solid @border-color-dark;
+      font-family: @accent-font-family;
+      border: @border-width-lg solid @primary-color;
       border-radius: @border-radius-lg;
       background: @light-color;
 
-      font-family: @accent-font-family;
-
-      .cta-warn {
-        margin-top: @layout-padding-lg;
-        text-align: center;
+      @media screen and (max-width: @size-sm) {
+        max-width: 100%;
+        width: 100%;
+        border-radius: 0;
+        border-width: @border-width-lg 0;
       }
+
       .cta-call {
         font-size: @font-size-lg;
         text-align: center;

@@ -58,7 +58,6 @@ export default class IndexPage extends Component {
             September 13<sup>th</sup>, 2017
           </h3>
           <div className="cta">
-            <h5 className="cta-warn">Seating is very limited.</h5>
             <p className="cta-call">Signup and reserve your seat for free.</p>
             <SubscribeForm />
           </div>
