@@ -27,6 +27,9 @@
 	.st21{fill:#029F4A;stroke:#454E5D;stroke-miterlimit:10;}
 	.st22{fill:#6D6E71;stroke:#454E5D;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 	.st23{fill:#FFFFFF;stroke:#454E5D;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st24{display:inline;}
+	.st25{fill:#FFFFFF;stroke:#FFFFFF;stroke-width:1.2777;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st26{fill:none;stroke:#FFFFFF;stroke-width:1.2122;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 </style>
 <g id="Reference" class="st0">
 </g>
