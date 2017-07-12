@@ -61,7 +61,7 @@ export default class IndexPage extends Component {
             <p className="cta-call">Signup and reserve your seat for free.</p>
             <SubscribeForm />
           </div>
-          <Factoid icon={FirstIcon} content="Probably the worlds first PopUp Conference!" right="4rem" bottom="6rem" />
+          <Factoid icon={FirstIcon} content="Probably the worlds first PopUp Conference!" right="5%" top="10%" />
         </div>
       </div>
     );

@@ -2,30 +2,35 @@
   @factoid-height: 2*(@html-line-height * @font-size-lg) + @layout-padding + 1rem;
   position: absolute;
 
+  opacity: 0;
+  animation: float-up .4s .4s ease 1 forwards;
+
   .factoid-icon {
     display: block;
+    height: 220%;
     position: absolute;
+    z-index: 1;
     top: -60%;
     left: -1.5*@factoid-height;
 
-    &, & svg {
-      height: 150%;
+    svg {
+      height: 100%;
       width: auto;
     }
   }
+
 
   .factoid-content {
     padding: @layout-padding/2;
     padding-left: @layout-padding/2 + @factoid-height/2;
     margin: 0;
 
+    height: @factoid-height;
 
     border: @border-width-lg solid @dark-color;
     border-radius: @border-radius-lg;
     background: @light-color;
     .shadow-variant(.4rem);
-
-    height: @factoid-height;
 
     .factoid-text {
       margin: 0;
