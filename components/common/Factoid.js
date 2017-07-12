@@ -12,6 +12,7 @@ export default class Factoid extends Component {
     left: PropTypes.string,
     right: PropTypes.string,
     bottom: PropTypes.string,
+    animationDelay: PropTypes.string,
   }
 
   constructor(props) {
@@ -20,9 +21,9 @@ export default class Factoid extends Component {
   }
 
   render() {
-    const { content, icon, top, left, right, bottom } = this.props;
+    const { content, icon, top, left, right, bottom, animationDelay } = this.props;
     return (
-      <div className={classnames('factoid')} style={{ top, left, right, bottom }}>
+      <div className={classnames('factoid')} style={{ top, left, right, bottom, animationDelay }}>
         <SVGInline className="factoid-icon" svg={icon} />
         <div className="factoid-content">
           <p className="factoid-text">{ content }</p>

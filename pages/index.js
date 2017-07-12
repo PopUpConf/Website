@@ -7,6 +7,7 @@ import { config } from 'config';
 
 import Logo from '!raw-loader!../assets/PopUpConf_Logo.svg';
 import FirstIcon from '!raw-loader!../assets/PopUp_Icons_First.svg';
+import QuestionIcon from '!raw-loader!../assets/PopUp_Icons_Question.svg';
 import OpenGraphImage from '../assets/PopUpConf_OpenGraph.png';
 import TwitterImage from '../assets/PopUpConf_Twitter.png';
 
@@ -61,7 +62,8 @@ export default class IndexPage extends Component {
             <p className="cta-call">Signup and reserve your seat for free.</p>
             <SubscribeForm />
           </div>
-          <Factoid icon={FirstIcon} content="Probably the worlds first PopUp Conference!" right="5%" top="10%" />
+          <Factoid icon={FirstIcon} content="Probably the worlds first PopUp Conference!" right="10%" top="8%" animationDelay=".5s" />
+          <Factoid icon={QuestionIcon} content="Seating is very limited, reserve your seat now!" left="20%" bottom="10%" animationDelay="2s" />
         </div>
       </div>
     );
