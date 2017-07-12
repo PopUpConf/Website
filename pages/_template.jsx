@@ -26,6 +26,10 @@ export default class extends Component {
               type: 'image/png',
               href: Favicon,
             },
+            {
+              rel: 'stylesheet',
+              href: 'https://fonts.googleapis.com/css?family=Varela+Round',
+            },
           ]}
         />
         {this.props.children}
