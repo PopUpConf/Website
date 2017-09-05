@@ -55,7 +55,7 @@ export default class IndexPage extends Component {
             <SVGInline svg={Logo} /><br />
           </h1>
           <h3>
-            September 13<sup>th</sup>, 2017
+            Postboned until Fall 2017
           </h3>
           <div className="cta">
             <p className="cta-call">Signup and reserve your seat for free.</p>
